@@ -1,0 +1,5 @@
+creditcard.csv
+train.csv
+clean_train.csv
+scaled.csv
+__pycache__/
