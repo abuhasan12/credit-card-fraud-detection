@@ -13,7 +13,14 @@ transaction amount, and 28 unknown features which are the result of PCA performe
 
 ## Data Analysis
 
-The first step in the project was to perform a thorough analysis of the data. This included removing extreme outliers to see the impact on the model's ability to classify fraud transactions. Resampling was performed on the data and multiple methods of undersampling were tried including random undersampling, cluster centroid undersampling and these in combination with Tomek links. It was found that Tomek links followed by random undersampling performed the best. Correlations between features were also analyzed. Dimensionality reduction methods such as PCA, t-SNE, MDS and LLE were used to visualize the data and classes better. The t-SNE visualisation looked the best.
+The first step in the project was to perform a thorough analysis of the data. This included removing extreme outliers to see the impact on the model's ability to classify fraud transactions. Resampling was performed on the data and multiple methods of undersampling were tried including random undersampling, cluster centroid undersampling and these in combination with Tomek links. It was found that Tomek links followed by random undersampling performed the best.
+
+![Balanced dataset](https://github.com/abuhasan12/credit-card-fraud-detection/blob/main/readme_imgs/Class%20Balanced.png)
+
+Correlations between features were also analyzed. Dimensionality reduction methods such as PCA, t-SNE, MDS and LLE were used to visualize the data and classes better. The t-SNE visualisation looked the best.
+
+![Feature correlation matrix](https://github.com/abuhasan12/credit-card-fraud-detection/blob/main/readme_imgs/Correlation%20Matrix.png)
+![Visualisation of classes](https://github.com/abuhasan12/credit-card-fraud-detection/blob/main/readme_imgs/t-SNE.png)
 
 ## Model
 
@@ -24,11 +31,15 @@ The chosen model was a **voting classifier** created using scikit-learn. It achi
 * A KNN classifier
 * A Bagged Logstic Regression classifier
 
+![Model confusion matrix](https://github.com/abuhasan12/credit-card-fraud-detection/blob/main/readme_imgs/Confusion%20Matrix.png)
+
 The metrics used to evaluate the validation performance of the final classifier were recall and specificity:
 * Recall - to assess the model's performance in classifying fraud transactions
 * Specificity - to assess the model's performance in classifying non-fraud transactions
 
 The final model had a recall of 95%, accuracy of 96% and specificity of 96% on the test set.
+
+![Model performance](https://github.com/abuhasan12/credit-card-fraud-detection/blob/main/readme_imgs/Performance%20Scores.png)
 
 ## Conclusion
 
