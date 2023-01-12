@@ -9,6 +9,8 @@ It contains 284,807 transactions, of which 0.172% are fraudelent transactions.
 The features of the dataset include time (which is the amount of seconds elapsed since the first transaction),
 transaction amount, and 28 unknown features which are the result of PCA performed on the original dataset to protect the privacy of the credit card owners.
 
+![Imbalanced dataset](https://github.com/abuhasan12/credit-card-fraud-detection/blob/main/readme_imgs/Class%20Imbalance.png)
+
 ## Data Analysis
 
 The first step in the project was to perform a thorough analysis of the data. This included removing extreme outliers to see the impact on the model's ability to classify fraud transactions. Resampling was performed on the data and multiple methods of undersampling were tried including random undersampling, cluster centroid undersampling and these in combination with Tomek links. It was found that Tomek links followed by random undersampling performed the best. Correlations between features were also analyzed. Dimensionality reduction methods such as PCA, t-SNE, MDS and LLE were used to visualize the data and classes better. The t-SNE visualisation looked the best.
